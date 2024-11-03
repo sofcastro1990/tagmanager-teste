@@ -2,7 +2,7 @@
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
-    <title>Teste Google Tag Manager</title>
+    <title>Formulário com Mensagem de Agradecimento</title>
   
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -76,6 +76,14 @@
         #formContainer button[type="submit"]:hover {
             background-color: #45a049;
         }
+
+        /* Estilo da Mensagem de Agradecimento */
+        #thankYouMessage {
+            display: none;
+            text-align: center;
+            margin-top: 50px;
+            font-family: Arial, sans-serif;
+        }
     </style>
 </head>
 <body>
@@ -103,21 +111,29 @@
         </form>
     </div>
 
-    <!-- Script para mostrar/esconder o formulário e redirecionar ao enviar -->
+    <!-- Mensagem de Agradecimento Oculta -->
+    <div id="thankYouMessage">
+        <h1>Obrigado pelo envio!</h1>
+        <p>Recebemos o seu formulário com sucesso.</p>
+    </div>
+
+    <!-- Script para mostrar/esconder o formulário e exibir mensagem de agradecimento -->
     <script>
         // Mostra/esconde o formulário ao clicar no botão
         document.getElementById('openFormButton').onclick = function() {
             document.getElementById('formContainer').classList.toggle('hidden');
         };
 
-        // Redireciona para página de "Thank You" após o envio do formulário
+        // Exibe a mensagem de "Thank You" após o envio do formulário
         document.getElementById('myForm').onsubmit = function(event) {
             event.preventDefault();  // Evita o envio padrão do formulário
-            window.location.href = 'thankyou.html';  // Redireciona para a página de "Thank You"
+            document.getElementById('formContainer').style.display = 'none';  // Esconde o formulário
+            document.getElementById('thankYouMessage').style.display = 'block';  // Mostra a mensagem de agradecimento
         };
     </script>
 </body>
 </html>
+
 
 
 
