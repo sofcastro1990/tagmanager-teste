@@ -4,29 +4,27 @@
     <meta charset="UTF-8">
     <title>Teste Google Tag Manager</title>
   
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-WSJ6PFPH');</script>
-<!-- End Google Tag Manager -->
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WSJ6PFPH');</script>
+    <!-- End Google Tag Manager -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Botão para Abrir Formulário</title>
     <link rel="stylesheet" href="styles.css">
-
-
-    
-
 </head>
 <body>
     <h1>Bem-vindo ao meu site de teste!</h1>
-  <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WSJ6PFPH"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+    
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WSJ6PFPH"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
+    <!-- Botão para abrir o formulário -->
     <button id="openFormButton">Abrir Formulário</button>
 
     <!-- Formulário Oculto -->
@@ -50,10 +48,71 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         };
     </script>
 
-</body>
+    /* styles.css */
+
+/* Esconde o formulário inicialmente */
+.hidden {
+    display: none;
+}
+
+/* Estilo do Botão */
+#openFormButton {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#openFormButton:hover {
+    background-color: #45a049;
+}
+
+/* Estilo do Formulário */
+#formContainer {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    max-width: 400px;
+}
+
+#formContainer h2 {
+    margin-top: 0;
+}
+
+#formContainer label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+#formContainer input {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Estilo do Botão de Envio do Formulário */
+#formContainer button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#formContainer button[type="submit"]:hover {
+    background-color: #45a049;
+}
 
 
-
-    
 </body>
 </html>
